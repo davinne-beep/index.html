@@ -1,0 +1,158 @@
+<!birthday html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Mercy❤️</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: "Georgia", serif;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: flex-center;
+    padding: 50px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    animation: fadeIn 2s ease-in-out;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #e91e63;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #e91e63;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #c2185b;
+}
+
+.love-letter {
+    display: none;
+    margin-top: 25px;
+    font-size: 1.1em;
+    color: #444;
+    text-align: left;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Confetti */
+.confetti {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    top: -10px;
+    opacity: 0.9;
+    animation: fall linear forwards;
+    border-radius: 50%;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(720deg);
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Hidden YouTube Player for Background Music -->
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/lWA2pjMjpBs?autoplay=1&loop=1&playlist=lWA2pjMjpBs"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+<div class="container">
+    <h1>Happy Birthday Mercy🎂</h1>
+    <p>Today is all about you.</p>
+    <button onclick="openLetter()">Open Your Letter 💌</button>
+
+    <div class="love-letter" id="letter">
+        <p> Dearest Gentle reader ,</p>
+
+        <p>
+        We've been apart for far too long 😂. It has come to this author's attention that today marks the anniversary of
+        a most extraordinary arrival into our world.
+        Our society was unknowingly graced with a presence far more dazzling than the finest diamonds of the season. One cannot 
+        help but observe that a charm such as yours does not exist.....it reigns. Wits sharper than any nobleman's tongue ,
+        a smile capable of undoing the sternest of hearts and a spirit that refuses to be confined by ordinary expectations.
+        </p>
+
+        <p>
+        This author is indeed honored to call her cousin though such a title scarcely captures the truth - for in her she has 
+        found not merely family , but the sister she never had and the example she looks up to with the deepest admiration.
+        May this new year of her life unfold with triumphs worthy of her character tenfold and love that refects the boundless
+        warmth she gives so freely.
+        </p>
+
+        <p>
+        Yours most sincerely,
+        Lady Eunice Gicheri
+        Happy Birthday cuzooo❤️
+        </p>
+    </div>
+</div>
+
+<script>
+function openLetter() {
+    document.getElementById("letter").style.display = "block";
+    launchConfetti();
+}
+
+function launchConfetti() {
+    const colors = [
+        "#ff0a54", "#ff477e", "#ff85a1", "#fbb1bd",
+        "#f9bec7", "#ffbe0b", "#fb5607", "#8338ec",
+        "#3a86ff", "#06d6a0", "#ffd166", "#ef476f"
+    ];
+
+    for (let i = 0; i < 200; i++) {
+        let confetti = document.createElement("div");
+        confetti.classList.add("confetti");
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor =
+            colors[Math.floor(Math.random() * colors.length)];
+        confetti.style.animationDuration =
+            (Math.random() * 3 + 3) + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 6000);
+    }
+}
+</script>
+
+</body>
+</html>
